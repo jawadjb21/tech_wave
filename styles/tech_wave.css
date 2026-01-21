@@ -10,21 +10,23 @@
 }
 
 /* SHARED */
-:root{
+:root {
     --primary-color: #1A0B2E;
     --menu-bg-color: #2f1156;
     --gradient-color-1: #a5b42e;
     --gradient-color-2: #c11cb3;
     --gradient-color-3: #4b0b90;
+    --text-color: whitesmoke;
+    --text-color-2: #c9b3de;
 }
 
-.display-flex{
+.display-flex {
     display: flex;
 }
 
-.btn-primary{
+.btn-primary {
     background-image: linear-gradient(75deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
-    color: whitesmoke;
+    color: var(--text-color);
     cursor: pointer;
     border-radius: 20px;
     padding: 1rem;
@@ -35,29 +37,18 @@
     align-items: center;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     transform: scale(1.25) translate(5px);
 }
 
-.wave{
-    background: linear-gradient(to top, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.navbar h2{
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 /* NAVBAR */
-.navbar{
+.navbar {
     justify-content: space-around;
     align-items: center;
     vertical-align: middle;
     background-color: var(--primary-color);
-    color: whitesmoke;
+    color: var(--text-color);
+    border: thin solid var(--menu-bg-color);
 }
 
 .menu {
@@ -71,7 +62,7 @@
 
 .menu-item a {
     text-decoration: none;
-    color: whitesmoke;
+    color: var(--text-color);
     transition: 1s ease-in-out;
 }
 
@@ -80,17 +71,114 @@
     transform: scale(2) translate(5px);
 }
 
+.wave {
+    background: linear-gradient(to top, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.navbar h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* BANNER */
+.banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-image: url("../assets/hero-bg.png");
+    background-position: center;
+    padding: 3rem 0;
+    color: var(--text-color);
+}
+
+.banner img {
+    background-image: url("../assets/hero-circle.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8rem;
+    position: relative;
+}
+
+.mic-button {
+    padding: 5px 10px;
+    font-size: .75rem;
+    font-weight: bold;
+    background-color: #00FF88;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 1px 1px 1px #00FF88;
+    position: absolute;
+    top: 225px;
+    right: 600px;
+    z-index: 10;
+}
+
+.banner-title {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    /* To keep the mic aligned with the waves. */
+    margin: 0;
+    padding: 0;
+}
+
+.description {
+    color: var(--text-color-2);
+    max-width: 600px;
+}
+
+.banner-btn {
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.banner-btn>.btn-primary{
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    text-align: center;
+}
+
+.banner-btn .btn-primary a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: .75rem;
+}
+
+.banner-btn .btn-transparent{
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    text-align: center;
+    padding: 1rem;
+    color: #00FF88;
+    background-color: transparent;
+    border: thin solid #00FF88;
+    transition: 1s ease-in-out;
+}
+
+.banner-btn .btn-transparent:hover{
+    transform: scale(1.25) translate(5px);
+}
+
 /* RESPONSIVE */
 @media screen and (max-width:576px) {
-    .navbar{
+    .navbar {
         justify-content: space-between;
         padding: 0px 20px;
     }
-    .navbar .menu, .navbar .btn-primary{
+
+    .navbar .menu,
+    .navbar .btn-primary {
         display: none;
     }
 
-    .navbar::after{
+    .navbar::after {
         content: url("../assets/hamburger-menu.png");
     }
 }
