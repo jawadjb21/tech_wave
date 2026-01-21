@@ -46,6 +46,11 @@
     color: transparent;
 }
 
+.navbar h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 /* NAVBAR */
 .navbar{
     justify-content: space-around;
