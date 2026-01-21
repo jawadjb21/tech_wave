@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Gravitas+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.google-sans-font {
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "GRAD" 0;
+}
+
+/* SHARED */
+:root{
+    --primary-color: #1A0B2E;
+    --menu-bg-color: #2f1156;
+    --gradient-color-1: #a5b42e;
+    --gradient-color-2: #c11cb3;
+    --gradient-color-3: #4b0b90;
+}
+
+.display-flex{
+    display: flex;
+}
+
+.btn-primary{
+    background-image: linear-gradient(75deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 1rem;
+    border: thin solid var(--menu-bg-color);
+    transition: 1s ease-in-out;
+    gap: .25rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary:hover{
+    transform: scale(1.25) translate(5px);
+}
+
+.wave{
+    background: linear-gradient(to top, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* NAVBAR */
+.navbar{
+    justify-content: space-around;
+    align-items: center;
+    vertical-align: middle;
+    background-color: var(--primary-color);
+    color: whitesmoke;
+}
+
+.menu {
+    list-style: none;
+    background-color: var(--menu-bg-color);
+    text-align: center;
+    border-radius: 25px;
+    gap: .5rem;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 1s ease-in-out;
+}
+
+.menu-item a:hover {
+    cursor: pointer;
+    transform: scale(2) translate(5px);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:576px) {
+    .navbar{
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+    .navbar .menu, .navbar .btn-primary{
+        display: none;
+    }
+
+    .navbar::after{
+        content: url("../assets/hamburger-menu.png");
+    }
+}
