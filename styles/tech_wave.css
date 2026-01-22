@@ -13,6 +13,7 @@
 :root {
     --primary-color: #1A0B2E;
     --menu-bg-color: #2f1156;
+    --secondary-color: #230E3D;
     --gradient-color-1: #a5b42e;
     --gradient-color-2: #c11cb3;
     --gradient-color-3: #4b0b90;
@@ -202,7 +203,7 @@
     align-items: center;
     background-color: var(--primary-color);
     text-align: center;
-    padding: 20px 200px 120px;
+    padding: 20px 200px 80px;
     border: none;
 }
 
@@ -242,6 +243,70 @@
     color: var(--text-color-2);
 }
 
+
+/* FEATURES */
+.features{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--secondary-color);
+    padding: 10px 200px 80px;
+}
+
+.feature-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    gap: 1rem;
+}
+
+.headphone{
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.mobile, .global{
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.interviews{
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.resources{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.feature-cards{
+    background-color: var(--menu-bg-color);
+    border-radius: 20px;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 1.5px 1px black;
+    transition: 1s ease-in-out;
+}
+.feature-cards:hover{
+    transform: scale(1.1) translate(3px);
+}
+
+.feature-content{
+    margin: auto 0;
+}
+
+.feature-header{
+    color: var(--text-color);
+}
+
+.feature-description{
+    color: var(--text-color-2);
+}
+
 /* RESPONSIVE */
 @media screen and (max-width:576px) {
     .navbar {
@@ -274,7 +339,7 @@
         padding: 30px;
     }
 
-    .about{
+    .about, .features{
         padding: 20px 15px 60px;
     }
     .about .about-content .description {
@@ -286,4 +351,15 @@
         row-gap: 20px;
     }
 
+    .features{
+        text-align: center;
+    }
+    .feature-container{
+        grid-template-columns: 1fr;
+    }
+
+    .feature-cards{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
