@@ -121,6 +121,11 @@
 
 .banner-img-container img {
     padding: 6rem;
+    transition: 1s ease-in-out;
+}
+
+.banner-img-container img:hover{
+    transform:  skew(30deg, 30deg);
 }
 
 .mic-button {
@@ -294,7 +299,7 @@
     transition: 1s ease-in-out;
 }
 
-.feature-cards:hover {
+.feature-cards:hover, .video_card:hover {
     transform: scale(1.05) translate(2px);
     cursor: pointer;
 }
@@ -331,6 +336,8 @@
 .video_card {
     background-color: var(--menu-bg-color);
     border-radius: 20px;
+    box-shadow: 0 1.5px 1px black;
+    transition: 1s ease-in-out
 }
 
 .video_card iframe {
