@@ -41,7 +41,7 @@
     transform: scale(1.25) translate(5px);
 }
 
-.section-title{
+.section-title {
     color: var(--text-color);
     font-size: 3rem;
     font-weight: 900;
@@ -77,7 +77,7 @@
     transform: scale(2) translate(5px);
 }
 
-.fa-bars{
+.fa-bars {
     display: none !important;
 }
 
@@ -196,24 +196,50 @@
 }
 
 /* ABOUT */
-.about{
+.about {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--primary-color);
     text-align: center;
-    padding: 50px 200px 120px;
+    padding: 20px 200px 120px;
+    border: none;
 }
 
-.about .about-content .description{
+.about .about-content .description {
     max-width: 750px;
 }
 
-.about hr{
+.about hr {
     width: 100%;
     color: #e2d6ee;
     opacity: .1;
     margin: 1rem 0;
+}
+
+.about-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.about-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1px;
+}
+
+.about-header {
+    padding: 0;
+    color: #00FF88;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.about-description {
+    color: var(--text-color-2);
 }
 
 /* RESPONSIVE */
@@ -231,7 +257,7 @@
     .navbar::after {
         content: url("../assets/hamburger-menu.png");
     }
-    
+
     .banner-img-container {
         top: 70px;
     }
@@ -244,8 +270,19 @@
         right: 20px;
     }
 
-    .banner-content{
+    .banner-content {
         padding: 30px;
+    }
+
+    .about{
+        padding: 20px 15px 60px;
+    }
+    .about .about-content .description {
+        width: 100%;
+    }
+
+    .about-info {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
