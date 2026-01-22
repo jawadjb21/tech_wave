@@ -17,7 +17,7 @@
     --gradient-color-2: #c11cb3;
     --gradient-color-3: #4b0b90;
     --text-color: whitesmoke;
-    --text-color-2: #c9b3de;
+    --text-color-2: #e2d6ee;
 }
 
 .display-flex {
@@ -39,6 +39,12 @@
 
 .btn-primary:hover {
     transform: scale(1.25) translate(5px);
+}
+
+.section-title{
+    color: var(--text-color);
+    font-size: 3rem;
+    font-weight: 900;
 }
 
 /* NAVBAR */
@@ -189,6 +195,26 @@
     display: none !important;
 }
 
+/* ABOUT */
+.about{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 50px 200px 120px;
+}
+
+.about .about-content .description{
+    max-width: 750px;
+}
+
+.about hr{
+    width: 100%;
+    color: #e2d6ee;
+    opacity: .1;
+    margin: 1rem 0;
+}
 
 /* RESPONSIVE */
 @media screen and (max-width:576px) {
