@@ -308,7 +308,7 @@
 .feature-description{
     color: var(--text-color-2);
 }
-/* Host and Episodes */
+/* Episodes */
 .hosts_episodes{
     flex-direction: column;
     justify-content: center;
@@ -351,6 +351,34 @@
     color: #00FF88;
     font-size: .8rem;
     vertical-align: middle;
+}
+
+/* HoST */
+.host_card{
+    background-color: var(--menu-bg-color);
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 10px  20px;
+    border-radius: 20px;
+}
+
+.host_content{
+    width: 800px;
+}
+
+.host_content .menu{
+    padding-left: 0;
+}
+
+.host_content .menu .social-link a{
+    background: linear-gradient(to top, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 5px;
+    border: thin solid var(--text-color-2);
+    border-radius: 50%;
 }
 
 /* RESPONSIVE */
