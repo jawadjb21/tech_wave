@@ -246,7 +246,7 @@
 
 
 /* FEATURES */
-.features{
+.features {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -255,34 +255,35 @@
     padding: 10px 200px 80px;
 }
 
-.feature-container{
+.feature-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 250px);
     gap: 1rem;
 }
 
-.headphone{
+.headphone {
     grid-column: span 1;
     grid-row: span 2;
 }
 
-.mobile, .global{
+.mobile,
+.global {
     grid-column: span 2;
     grid-row: span 1;
 }
 
-.interviews{
+.interviews {
     grid-column: span 2;
     grid-row: span 1;
 }
 
-.resources{
+.resources {
     grid-column: span 1;
     grid-row: span 1;
 }
 
-.feature-cards{
+.feature-cards {
     background-color: var(--menu-bg-color);
     border-radius: 20px;
     padding: 15px;
@@ -292,24 +293,26 @@
     box-shadow: 0 1.5px 1px black;
     transition: 1s ease-in-out;
 }
-.feature-cards:hover{
+
+.feature-cards:hover {
     transform: scale(1.05) translate(2px);
     cursor: pointer;
 }
 
-.feature-content{
+.feature-content {
     margin: auto 0;
 }
 
-.feature-header{
+.feature-header {
     color: var(--text-color);
 }
 
-.feature-description{
+.feature-description {
     color: var(--text-color-2);
 }
+
 /* Episodes */
-.hosts_episodes{
+.hosts_episodes {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -319,23 +322,23 @@
     padding: 10px 200px 80px;
 }
 
-.featured_videos{
+.featured_videos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
 }
 
-.video_card{
+.video_card {
     background-color: var(--menu-bg-color);
     border-radius: 20px;
 }
 
-.video_card iframe{
+.video_card iframe {
     width: 100%;
     border-radius: 20px 20px 0 0;
 }
 
-.video_card_content{
+.video_card_content {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -358,20 +361,22 @@
     background-color: var(--menu-bg-color);
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-    padding: 10px  20px;
+    gap: 5rem;
+    padding: 10px  120px;
     border-radius: 20px;
 }
 
 .host_content{
-    width: 800px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.host_content .menu{
+.host_content .menu {
     padding-left: 0;
 }
 
-.host_content .menu .social-link a{
+.host_content .menu .social-link a {
     background: linear-gradient(to top, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
     -webkit-background-clip: text;
     background-clip: text;
@@ -413,9 +418,12 @@
         padding: 30px;
     }
 
-    .about, .features, .hosts_episodes{
+    .about,
+    .features,
+    .hosts_episodes {
         padding: 20px 15px 60px;
     }
+
     .about .about-content .description {
         width: 100%;
     }
@@ -425,19 +433,47 @@
         row-gap: 20px;
     }
 
-    .features{
+    .features {
         text-align: center;
     }
-    .feature-container{
+
+    .feature-container {
         grid-template-columns: 1fr;
     }
 
-    .feature-cards{
+    .feature-cards {
         grid-column: span 1;
         grid-row: span 1;
     }
 
-    .featured_videos{
+    .featured_videos {
         grid-template-columns: 1fr;
     }
+
+    .host_card {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+
+    }
+
+    .host_content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .host_content * {
+        margin: 0;
+    }
+
+    .host_content .menu {
+        justify-content: center;
+    }
+
+
 }
