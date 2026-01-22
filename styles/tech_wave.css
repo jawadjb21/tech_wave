@@ -71,6 +71,10 @@
     transform: scale(2) translate(5px);
 }
 
+.fa-bars{
+    display: none !important;
+}
+
 .wave {
     background: linear-gradient(to top, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
     -webkit-background-clip: text;
@@ -201,15 +205,13 @@
     .navbar::after {
         content: url("../assets/hamburger-menu.png");
     }
-
     
     .banner-img-container {
-        top: 60px;
+        top: 70px;
     }
 
     .banner-img-container img {
         width: 80px;
-        pad: 1.5rem;
     }
 
     .mic-button {
@@ -217,7 +219,7 @@
     }
 
     .banner-content{
-        padding-bottom: 20px;
+        padding: 30px;
     }
 
 }
